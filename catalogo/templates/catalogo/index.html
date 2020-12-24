@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>CATÁLOGO - ROCKLAND</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <section>
+        <div class="container">
+<form method="post">
+{% csrf_token %}
+            <input id="myInput" type="file" webkitdirectory directory multiple>
+            <input id="teste" type="text" value="A10">
+            <button type="submit">Selecionar</button>
+</form>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+</html>
+
+<script>
+    var folder = document.getElementById("myInput");
+    folder.onchange=function(){
+        var files = folder.files,
+        len = files.length,
+        i;
+        console.log(files[1]);
+        console.log(URL.createObjectURL(e.target.files[0]))
+    }
+</script>
