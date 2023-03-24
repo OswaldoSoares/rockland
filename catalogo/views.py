@@ -19,7 +19,7 @@ def index(request):
 
 
 def mostra_fotos(request):
-    pasta = 'C:\Catalogo\A07'
+    pasta = 'C:\Catalogo\A03'
     caminho = [os.path.join(pasta, nome) for nome in os.listdir(pasta)]
     catalogo = []
     for itens in caminho:
@@ -62,4 +62,4 @@ def mostra_fotos(request):
 
 
 
-    # return render(request, 'catalogo/catalogo.html', {'catalogo': catalogo})
+    return render(request, 'catalogo/catalogo.html', {'catalogo': catalogo})
